@@ -10,3 +10,8 @@ Code Against Humanity is a Fortune-like program based on Cards Against Humanity.
 - QEY does one thing and does it well ☑
 - QEY works among other software ☑
 - QEY handles text streams ☑
+
+###Output Examples
+- I'm sorry, Professor, but I couldn't complete my homework because of Half-assed foreplay.
+- During sex, I like to think about Sudden Poop Explosion Disease.
+- In Rome, there are whisperings that the Vatican has a secret room devoted to Same-sex ice dancing.
