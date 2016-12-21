@@ -7,9 +7,9 @@ Code Against Humanity is a Fortune-like program based on Cards Against Humanity.
 ###Execution
   	cah
 ###UNIX Checklist
-- QEY does one thing and does it well ☑
-- QEY works among other software ☑
-- QEY handles text streams ☑
+- CAH does one thing and does it well ☑
+- CAH works among other software ☑
+- CAH handles text streams ☑
 
 ###Output Examples
 - I'm sorry, Professor, but I couldn't complete my homework because of Half-assed foreplay.
