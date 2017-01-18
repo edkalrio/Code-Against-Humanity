@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #Code Against Humanity is a Fortune-like program based on Cards Against Humanity.
 
@@ -12,13 +12,15 @@
 #Randomly reads the databases for black and white cards. A couple of wcards are 
 #needed for double-tag cards. shuf is better than sort -R because it's a O(n) 
 #algorithm. 
-#Files are piped to /dev/fd/n and then, repiped.
 
-read RND_B1 < <(shuf bcards.txt)
-read RND_W1 < <(shuf wcards.txt)
-read RND_W2 < <(shuf wcards.txt)
-read RND_W3 < <(shuf wcards.txt)
+RND_B1=$(shuf bcards.txt | sed -n '1p')
+
+shuf wcards.txt > /tmp/cah.txt
+
+RND_W1=$(sed -n '1p' /tmp/cah.txt)
+RND_W2=$(sed -n '2p' /tmp/cah.txt)
+RND_W3=$(sed -n '3p' /tmp/cah.txt)
 
 #Strings are matched and piped to the output.
 
-echo -e "$RND_B1" | sed -e "s/\_/$RND_W1/; s/\_/$RND_W2/; s/\_/$RND_W3/"
+echo "$RND_B1" | sed -e "s/\_/$RND_W1/; s/\_/$RND_W2/; s/\_/$RND_W3/"
